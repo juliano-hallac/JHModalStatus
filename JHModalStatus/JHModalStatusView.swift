@@ -16,12 +16,12 @@ class JHModalStatusView: UIView {
     let nibName = "JHModalStatusView"
     var contentView : UIView!
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpView()
     }
@@ -51,9 +51,6 @@ class JHModalStatusView: UIView {
     public func set(subHead text : String){
         self.subHeadLabel.text = text
     }
-    
-    
-    
     
     /*
     // Only override draw() if you perform custom drawing.
