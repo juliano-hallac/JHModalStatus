@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA3F91B41FA4D3A60043D214 /* JHModalStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3F91B21FA4D3A60043D214 /* JHModalStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA3F91BB1FA4D4900043D214 /* JHModalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3F91BA1FA4D4900043D214 /* JHModalStatusView.swift */; };
-		AAFB59B41FA4D5EC00E57273 /* JHStatusModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFB59B31FA4D5EC00E57273 /* JHStatusModalView.xib */; };
+		AAFB59B41FA4D5EC00E57273 /* JHModalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFB59B31FA4D5EC00E57273 /* JHModalStatusView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,7 +17,7 @@
 		AA3F91B21FA4D3A60043D214 /* JHModalStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHModalStatus.h; sourceTree = "<group>"; };
 		AA3F91B31FA4D3A60043D214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3F91BA1FA4D4900043D214 /* JHModalStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHModalStatusView.swift; sourceTree = "<group>"; };
-		AAFB59B31FA4D5EC00E57273 /* JHStatusModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHStatusModalView.xib; sourceTree = "<group>"; };
+		AAFB59B31FA4D5EC00E57273 /* JHModalStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHModalStatusView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				AA3F91BA1FA4D4900043D214 /* JHModalStatusView.swift */,
-				AAFB59B31FA4D5EC00E57273 /* JHStatusModalView.xib */,
+				AAFB59B31FA4D5EC00E57273 /* JHModalStatusView.xib */,
 				AA3F91B21FA4D3A60043D214 /* JHModalStatus.h */,
 				AA3F91B31FA4D3A60043D214 /* Info.plist */,
 			);
@@ -128,7 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAFB59B41FA4D5EC00E57273 /* JHStatusModalView.xib in Resources */,
+				AAFB59B41FA4D5EC00E57273 /* JHModalStatusView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

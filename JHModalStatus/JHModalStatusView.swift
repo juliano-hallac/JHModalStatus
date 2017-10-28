@@ -13,7 +13,7 @@ class JHModalStatusView: UIView {
     @IBOutlet weak var statusImage: UIImageView!
     @IBOutlet weak var headLineLabel: UILabel!
     @IBOutlet weak var subHeadLabel: UILabel!
-    let nibName = "JHStatusModelView"
+    let nibName = "JHModalStatusView"
     var contentView : UIView!
     
     override init(frame: CGRect) {
