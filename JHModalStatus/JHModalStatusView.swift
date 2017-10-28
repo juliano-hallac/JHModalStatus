@@ -8,13 +8,14 @@
 
 import UIKit
 
-class JHModalStatusView: UIView {
+public class JHModalStatusView: UIView {
 
     @IBOutlet weak var statusImage: UIImageView!
     @IBOutlet weak var headLineLabel: UILabel!
     @IBOutlet weak var subHeadLabel: UILabel!
     let nibName = "JHModalStatusView"
     var contentView : UIView!
+    var timer : Timer?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,14 +31,15 @@ class JHModalStatusView: UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: self.nibName, bundle: bundle)
         self.contentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        self.addSubview(self.contentView)
+        addSubview(contentView)
         
-        self.contentView.center = self.center
-        self.contentView.autoresizingMask = []
-        self.contentView.translatesAutoresizingMaskIntoConstraints = true
+        contentView.center = self.center
+        contentView.autoresizingMask = []
+        contentView.translatesAutoresizingMaskIntoConstraints = true
+        contentView.alpha = 0.0
         
-        self.headLineLabel.text = ""
-        self.subHeadLabel.text = ""
+        headLineLabel.text = ""
+        subHeadLabel.text = ""
     }
     
     public func set(image: UIImage){
@@ -50,6 +52,41 @@ class JHModalStatusView: UIView {
     
     public func set(subHead text : String){
         self.subHeadLabel.text = text
+    }
+    
+    public override func didMoveToSuperview() {
+        self.contentView.transform =  CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: 0.30, animations: {
+            self.contentView.alpha = 1.0
+            self.contentView.transform = CGAffineTransform.identity
+        }){ _ in
+            self.timer = Timer.scheduledTimer(
+                timeInterval: TimeInterval(3.0),
+                target: self,
+                selector: #selector(self.removeSelf),
+                userInfo: nil,
+                repeats: false)
+        }
+    }
+    
+    @objc private func removeSelf(){
+        UIView.animate(withDuration: TimeInterval(0.15), animations: {
+            self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.contentView.alpha = 0.0
+        })
+        {_ in
+            self.removeFromSuperview()
+        }
+        
+        
+        
+    }
+    
+    public override func layoutSubviews(){
+        self.layoutIfNeeded()
+        self.contentView.layer.masksToBounds = true
+        self.contentView.layer.cornerRadius = 10.0
+        self.contentView.clipsToBounds = true
     }
     
     /*
