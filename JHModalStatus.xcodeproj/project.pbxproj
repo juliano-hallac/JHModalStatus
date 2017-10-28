@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AA3F91B41FA4D3A60043D214 /* JHModalStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3F91B21FA4D3A60043D214 /* JHModalStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3F91BB1FA4D4900043D214 /* JHModalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3F91BA1FA4D4900043D214 /* JHModalStatusView.swift */; };
+		AAFB59B41FA4D5EC00E57273 /* JHStatusModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAFB59B31FA4D5EC00E57273 /* JHStatusModalView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA3F91AF1FA4D3A60043D214 /* JHModalStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JHModalStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3F91B21FA4D3A60043D214 /* JHModalStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHModalStatus.h; sourceTree = "<group>"; };
 		AA3F91B31FA4D3A60043D214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3F91BA1FA4D4900043D214 /* JHModalStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHModalStatusView.swift; sourceTree = "<group>"; };
+		AAFB59B31FA4D5EC00E57273 /* JHStatusModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JHStatusModalView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 		AA3F91B11FA4D3A60043D214 /* JHModalStatus */ = {
 			isa = PBXGroup;
 			children = (
+				AA3F91BA1FA4D4900043D214 /* JHModalStatusView.swift */,
+				AAFB59B31FA4D5EC00E57273 /* JHStatusModalView.xib */,
 				AA3F91B21FA4D3A60043D214 /* JHModalStatus.h */,
 				AA3F91B31FA4D3A60043D214 /* Info.plist */,
 			);
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					AA3F91AE1FA4D3A60043D214 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAFB59B41FA4D5EC00E57273 /* JHStatusModalView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3F91BB1FA4D4900043D214 /* JHModalStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +262,7 @@
 		AA3F91B81FA4D3A60043D214 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +276,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.julianohallac.JHModalStatus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -274,6 +285,7 @@
 		AA3F91B91FA4D3A60043D214 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
